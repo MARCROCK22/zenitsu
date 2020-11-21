@@ -18,7 +18,7 @@ module.exports = {
             case 'maxwarns':
 
                 if (!args[1] || !Number(args[1]))
-                    return embedResponse('Elije un numero.')
+                    return embedResponse('Elige un numero.')
 
                 if (parseInt(args[1]) <= 1)
                     return embedResponse('No puedes establecer un numero menor o igual que 1.');
@@ -43,11 +43,11 @@ module.exports = {
 
                 else if (args[1] == 'off') {
                     await idk(false);
-                    return embedResponse('Ahora no se podra ver el anuncio del nivel.')
+                    return embedResponse('Ahora no se podrá ver el anuncio del nivel.')
                 }
 
                 else {
-                    embedResponse('Elije entre on y off.\nEjemplo: z!settings showlevel off');
+                    embedResponse('Elige entre on y off.\nEjemplo: z!settings showlevel off');
                 }
 
                 break;
