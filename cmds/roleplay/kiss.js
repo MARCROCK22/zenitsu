@@ -9,17 +9,17 @@ module.exports = {
         botPermissions: [],
         memberPermissions: []
 
-    }, run: ({ client, message, embedResponse }) => {
+    }, run: ({ client, message, embedResponse, args }) => {
 
         let link = client.star.kiss();
-
+    
         let miembro = message.mentions.members.first();
 
         if (!miembro) return embedResponse('Tienes que mencionar a alguien!')
 
         let embed = new Discord.MessageEmbed()
             .setColor(client.color)
-            .setDescription(`${message.author.toString()} besó a ${miembro.user.toString()}!`)
+            .setDescription(`${message.author.toString()} besó a ${miembro.user.toString()}!${args[0] ? `\n${args.slice(1).join(' ')}` : ''}`)
             .setImage(link)
             .setTimestamp()
 
