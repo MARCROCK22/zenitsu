@@ -4,7 +4,7 @@ module.exports = {
         name: "kiss", //nombre del cmd
         alias: [], //Alias
         description: "Manda un gif besando a alguien", //Descripción (OPCIONAL)
-        usage: "z!kiss @mencion",
+        usage: "z!kiss @mencion [Texto]",
         category: 'interacción',
         botPermissions: [],
         memberPermissions: []
@@ -19,7 +19,7 @@ module.exports = {
 
         let embed = new Discord.MessageEmbed()
             .setColor(client.color)
-            .setDescription(`${message.author.toString()} besó a ${miembro.user.toString()}!${args[0] ? `\n${args.slice(1).join(' ')}` : ''}`)
+            .setDescription(`${message.author.toString()} besó a ${miembro.user.toString()}!${args[1] ? `\n${args.slice(1).join(' ')}` : ''}`)
             .setImage(link)
             .setTimestamp()
 
