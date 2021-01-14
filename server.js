@@ -66,7 +66,8 @@ client.devseval = [
     '507367752391196682', // Lil MARCROCK22
     '405958241202339840', // G5lvatron
     '538421122920742942', // Vyrek
-    '710880777662890095' // Avii
+    '710880777662890095', // Avii
+    '475050961354752018' // ILuck
 ];
 // eslint-disable-next-line no-unused-vars
 const Classes = require('./Utils/Classes.js');
