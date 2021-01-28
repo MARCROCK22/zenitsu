@@ -29,10 +29,10 @@ const client = new Discord.Client(
 		http: { version: 7 }
 	}
 );
-
+/*
 const DBL = require("dblapi.js");
 client.dbl = new DBL(process.env.DBLTOKEN, client);
-
+*/
 client.newDate = (ms) => {
 
 	let res = new Date(ms).toISOString().slice(11, 19);
@@ -49,6 +49,7 @@ client.devseval = [
 	'405958241202339840', // G5lvatron
 	'431571345050959872', // Matias
 	'710880777662890095' // Avii
+	// Vyrekn't
 ];
 // eslint-disable-next-line no-unused-vars
 const Classes = require('./Utils/Classes.js');
@@ -107,13 +108,13 @@ require('dotenv').config();
 ["comandos", "eventos"].forEach(x => require(`./handler/${x}`)(client));
 
 mongoose.set('useFindAndModify', false)
-
+/*
 mongoose.connect(process.env.MONGODB, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
 	console.log("[MongoDB]: Conectado a la base de datos Mongodb.");
 }).catch((err) => {
 	console.log(`[Error]: No se puede conectar a la base de datos de Mongodb. Error: ${err}`);
 });
-
+*/
 client.login(process.env.BOT_TOKEN)
 	.then(() => {
 

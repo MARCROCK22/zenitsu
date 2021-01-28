@@ -1,5 +1,3 @@
-const Discord = require('discord.js');
-
 const Command = require('../../Utils/Classes').Command;
 module.exports = class Comando extends Command {
 	constructor() {
@@ -17,9 +15,7 @@ module.exports = class Comando extends Command {
 	* @param {Array<String>} obj.args
 	*/
 
-	async run(obj) {
-
-		const { client, message, args, embedResponse, Hora } = obj;
+	run({ message, args, embedResponse }) {
 
 		let miembro = message.mentions.members.first();
 
@@ -43,12 +39,12 @@ module.exports = class Comando extends Command {
 
 		let usuario = miembro.user;
 
-		if (message.mentions.members.first().kickable) return message.mentions.members.first().ban({reason: razon, days: 7})
-			.then(async () => {
+		if (message.mentions.members.first().kickable) return message.mentions.members.first().ban({ reason: razon, days: 7 })
+			.then(() => {
 				return embedResponse('<:accept:779536642365063189> | ' + usuario.tag + ' fue baneado').catch(() => { })
-		})
+			})
 			.catch(() => {
 				return embedResponse('<:cancel:779536630041280522> | Error en banear el miembro.').catch(() => { })
-		})
+			})
 	}
 }

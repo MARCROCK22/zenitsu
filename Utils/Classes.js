@@ -35,14 +35,12 @@ class Options {
     }
 
 }
-module.exports.embedOptions = Options;
-
 class Command {
 
     constructor() {
 
-		/**@type {Boolean}*/
-		this.dev = false;
+        /**@type {Boolean}*/
+        this.dev = false;
         /**@type {Array<String>} */
         this.alias = []
         /**@type {String}*/
@@ -67,12 +65,12 @@ class Command {
         }
     }
     /**
-    @returns {(Promise<(import('discord.js').Message|Object)>|void)}
+     * @returns {(Promise<(import('discord.js').Message|Object)>|void)}
     */
-    run() {
-
-    }
-
+    run() { }
 }
 
-module.exports.Command = Command
+module.exports = {
+    Command,
+    embedOptions: Options
+}
