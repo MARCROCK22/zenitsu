@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js-light');
 const ms = require('ms');
 const cooldowns = new Discord.Collection();
 //let cooldownniveles = new Set();
@@ -18,13 +18,16 @@ module.exports = async (client, message) => {
     message.guild.cachePrefix = prefix;
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const command = args.shift().toLowerCase()
+
+    if (message.author.bot) return;
+
     const afk = await message.author.fetchAfk()
     if (afk.status) {
         await message.author.deleteAfk()
         return message.reply('<:sesonroja:804750422828515339> | ¡Bienvenido de vuelta!')
     }
 
-    for (let user of message.mentions.users.array()) {
+    for (let user of message.mentions.users.array().filter(e => !e.bot)) {
         if (!user.cacheAfk) {
             await user.fetchAfk();
         }
@@ -41,17 +44,10 @@ module.exports = async (client, message) => {
         }
     }
 
-    if (message.author.bot) return;
     if (message.content.toLowerCase() == 'nezuko' || message.content.toLowerCase() == 'nezuko chan')
         return message.channel.send(`Nezuko chaaan!`);
 
     if (!message.content?.startsWith(prefix)) return;
-    let emojiFinded = message.guild.emojis.cache.find(a => a.name === message.content.slice(2)) || client.emojis.cache.find(a => a.name === message.content.slice(2));
-    //console.log(emojiFinded)
-    if (message.content.slice(0, 2) === ': ' && emojiFinded) {
-        if (message.deletable) message.delete();
-        return message.channel.send(emojiFinded.toString())
-    }
 
     /*if (!message.member.hasPermission('ADMINISTRATOR') && settings.borrarInv && message.content.match(/(https?:\/\/)?(www\.)?(discord\.(gg|io|me|li)|discordapp\.com\/invite)\/.+[a-z]/g)) {
 
@@ -102,7 +98,7 @@ module.exports = async (client, message) => {
         let check = [];
         if (commandfile.botPermissions.channel?.length) {
 
-            let permisos = message.channel.permissionsFor(message.client.user);
+            let permisos = message.channel.permissionsFor(message.guild.me);
             let permisosN = commandfile.botPermissions.channel;
             for await (let i of permisosN) {
                 if (!permisos.has(i)) {
@@ -203,7 +199,7 @@ module.exports = async (client, message) => {
                     .setDescription(err.stack.slice(0, 2048))
                     .addField('Comando usado', command)
             )
-            console.log(err)
+            console.log(err.message || err.stderr || err)
             return message.channel.send({
                 embed:
                     new Discord.MessageEmbed()

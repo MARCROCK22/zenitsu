@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-const { Message } = require('discord.js');
-const { Client } = require('discord.js');
+const { Message } = require('discord.js-light');
+const { Client } = require('discord.js-light');
 
 const Command = require('../../Utils/Classes').Command;
 module.exports = class Comando extends Command {
@@ -18,7 +18,7 @@ module.exports = class Comando extends Command {
     async run(obj) {
         const { message, client, embedResponse, args } = obj;
         const Canvas = require("canvas");
-        const Discord = require('discord.js');
+        const Discord = require('discord.js-light');
         const canvas = Canvas.createCanvas(834, 824)
         const ctx = canvas.getContext('2d')
         const { imagenes: { porquelloras: { chico, chica } } } = client;

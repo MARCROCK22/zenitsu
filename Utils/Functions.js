@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 const Classes = require('./Classes.js'),
     // eslint-disable-next-line no-unused-vars
-    Discord = require('discord.js');
+    Discord = require('discord.js-light');
 /**
  * @param {Classes.embedOptions} object 
  * @param {Object} options
@@ -12,7 +12,7 @@ const Classes = require('./Classes.js'),
  */
 module.exports.sendEmbed = (object = {}, options = { timestamp: Date.now() }) => {
 
-    let embed = new (require('discord.js')).MessageEmbed()
+    let embed = new (require('discord.js-light')).MessageEmbed()
 
     let { attachFiles, titleURL, fields, description, imageURL, footerLink, footerText, color, channel, title, thumbnailURL, authorURL, authorText, authorLink } = object;
 
@@ -810,7 +810,7 @@ module.exports.resizeGif = opts => async buf => {
 
     opts = Object.assign({
         resize_method: "lanczos2",
-        optimizationLevel: 2
+        optimizationLevel: 1
     }, opts);
 
     if (!Buffer.isBuffer(buf)) {

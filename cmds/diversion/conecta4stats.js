@@ -1,5 +1,5 @@
 const { sendEmbed } = require('../../Utils/Functions.js');
-const Discord = require('discord.js');
+const Discord = require('discord.js-light');
 const Command = require('../../Utils/Classes').Command;
 module.exports = class Comando extends Command {
 	constructor() {
@@ -33,4 +33,4 @@ module.exports = class Comando extends Command {
 
 		return message.channel.send({ embed: embed });
 	}
-}	
+}

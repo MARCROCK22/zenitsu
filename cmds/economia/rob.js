@@ -15,7 +15,7 @@ function checkCooldown(message) {
 }
 
 // eslint-disable-next-line no-unused-vars
-const Discord = require('discord.js'),
+const Discord = require('discord.js-light'),
     economy_model = require('../../models/economy'),
     icon_money = `<:monedaZenitsu:808837174031024208>`,
     { generarNumero: generarDinero, generarNumero, checkEconomy, sendEmbed } = require('../../Utils/Functions')

@@ -1,6 +1,6 @@
 const { readdirSync } = require("fs")
 // eslint-disable-next-line no-unused-vars
-const Discord = require('discord.js')
+const Discord = require('discord.js-light')
 /**
  * 
  * @param {Discord.Client} client 

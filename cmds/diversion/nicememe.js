@@ -1,7 +1,7 @@
 const Canvas = require('canvas')
 /* eslint-disable no-unused-vars */
-const { Message, MessageAttachment } = require('discord.js');
-const { Client } = require('discord.js');
+const { Message, MessageAttachment } = require('discord.js-light');
+const { Client } = require('discord.js-light');
 
 const Command = require('../../Utils/Classes').Command;
 module.exports = class Comando extends Command {

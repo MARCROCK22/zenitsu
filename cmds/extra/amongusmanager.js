@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const { MessageEmbed, Message, Client } = require("discord.js");
+const { MessageEmbed, Message, Client, MessageAttachment } = require('discord.js-light');
 const model = require('../../models/amongus')
 
 const Command = require('../../Utils/Classes').Command;
@@ -31,8 +31,9 @@ module.exports = module.exports = class Comando extends Command {
                         .setTimestamp()
             })
         let embed = new MessageEmbed()
+            .attachFiles(new MessageAttachment(`/home/MARCROCK22/zenitsu/Utils/Images/Among Us.png`, 'amongus.png'))
             .setTimestamp()
-            .setAuthor('Among Us Manager', `https://media.discordapp.net/attachments/803346384144433154/807737161457074257/O7MCJDNJHNERXCKFSC6TGNNE3E.png`)
+            .setAuthor('Among Us Manager', `attachment://amongus.png`)
             .setColor('#4ceb34')
             .setDescription('Reacciona con <:MUTE:807729858649391105> para mutear.\n' +
                 'Reacciona con <:UNMUTE:807729857693876224> para desmutear.\n\n' +

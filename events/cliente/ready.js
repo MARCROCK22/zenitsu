@@ -1,14 +1,17 @@
 // eslint-disable-next-line no-unused-vars
-const { MessageEmbed, Client, Presence, Util } = require('discord.js'),
+const { MessageEmbed, Client, Presence, Util } = require('discord.js-light'),
 	model = require('../../models/temp')
 require('dotenv').config();
-const { loadImage } = require("canvas")
+const { loadImage } = require("canvas");
 /**
  * 
  * @param {Client} client 
  */
 
 module.exports = async (client) => {
+
+	const guild = await client.guilds.fetch(`764529869739655198`);
+	await guild.emojis.fetch();
 
 	client.user.setPresence({
 		status: "dnd",
@@ -47,15 +50,7 @@ module.exports = async (client) => {
 	client.color = '#E09E36';
 
 	setInterval(async () => {
-		dbl.postStats(client.guilds.cache.size);
-		presence(client);
-		let canal = client.channels.cache.get('786997292040847401');
-		let mensaje = canal.messages.cache.get('786997341998678056') || await canal.messages.fetch('786997341998678056')
-		let embed = new MessageEmbed()
-			.setColor(client.color)
-			.addField('Servidores', client.guilds.cache.size, true)
-			.addField('Usuarios en cache', client.users.cache.filter(a => !a.bot).size, true)
-		mensaje.edit({ embed: embed })
+		await dbl.postStats(client.guilds.cache.size);
 	}, 1800000);//30m
 
 };
@@ -69,7 +64,7 @@ function presence(client) {
 	return client.user.setPresence({
 		status: "idle",
 		activity: {
-			name: "z!help | " + client.guilds.cache.size + " servidores",
+			name: "z!suggest | " + client.guilds.cache.size + " servidores",
 			type: "WATCHING"
 		}
 	});

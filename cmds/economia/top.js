@@ -1,7 +1,7 @@
 /* eslint-disable no-fallthrough */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-case-declarations */
-const Discord = require('discord.js');
+const Discord = require('discord.js-light');
 const Command = require('../../Utils/Classes').Command;
 module.exports = class Comando extends Command {
     constructor() {

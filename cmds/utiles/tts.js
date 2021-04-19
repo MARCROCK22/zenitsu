@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require('discord.js-light');
 const { sendEmbed } = require('../../Utils/Functions')
 const Command = require('../../Utils/Classes').Command
 const { Readable } = require('stream')
@@ -15,7 +15,7 @@ module.exports = class Comando extends Command {
         this.name = "tts"
         this.category = 'utiles'
         this.botPermissions.guild = ['ATTACH_FILES']
-        this.cooldown = 10;
+        this.cooldown = 15;
 
     }
 
@@ -55,7 +55,7 @@ module.exports = class Comando extends Command {
                 buffers.push(buffer)
             }
 
-            if (message.member.voice.channel && message.member.voice.channel.permissionsFor(message.client.user).has('CONNECT') && message.member.voice.channel.permissionsFor(message.client.user).has('SPEAK'))
+            if (message.member.voice.channel && message.member.voice.channel.permissionsFor(message.guild.me).has('CONNECT') && message.member.voice.channel.permissionsFor(message.guild.me).has('SPEAK'))
                 return message.member.voice.channel.join().then((voice) => voice.play(bufferToStream(Buffer.concat(buffers))))
 
             return message.channel.send({
@@ -71,7 +71,7 @@ module.exports = class Comando extends Command {
         else {
             let link = `https://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&textlen=64&client=tw-ob&q=${encodeURIComponent(str)}&tl=es`
 
-            if (message.member.voice.channel && message.member.voice.channel.permissionsFor(message.client.user).has('CONNECT') && message.member.voice.channel.permissionsFor(message.client.user).has('SPEAK'))
+            if (message.member.voice.channel && message.member.voice.channel.permissionsFor(message.guild.me).has('CONNECT') && message.member.voice.channel.permissionsFor(message.guild.me).has('SPEAK'))
                 return message.member.voice.channel.join().then((voice) => voice.play(link))
 
             let att = new Discord.MessageAttachment(link, 'audio.mp3');

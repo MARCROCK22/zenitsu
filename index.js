@@ -1,6 +1,6 @@
 require('moment').locale('es')
-const Discord = require('discord.js'),
-	{ Collection } = require('discord.js');
+const Discord = require('discord.js-light'),
+	{ Collection } = require('discord.js-light');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
@@ -68,13 +68,42 @@ const client = new Discord.Client(
 		partials: ['PRESENCE', 'MESSAGE', 'REACTION'],
 		http: { version: 7 },
 		messageCacheMaxSize: 100,
-		/*messageSweepInterval: 3600,
-		messageCacheLifetime: 1800,*/
+		messageSweepInterval: 3600,
+		messageCacheLifetime: 1800,
 		messageEditHistoryMaxSize: 1,
 		allowedMentions: { parse: [] },
 		ws: {
 			intents: 1701
-		}
+		},
+		cacheGuilds: true,
+		cacheOverwrites: true,
+		cacheRoles: true,
+		cacheEmojis: false,
+		cachePresences: false,
+		cacheChannels: true,
+		disabledEvents: [
+			'RESUMED',
+			'INVITE_CREATE',
+			'INVITE_DELETE',
+			'GUILD_MEMBER_ADD',
+			'GUILD_MEMBER_REMOVE',
+			'GUILD_MEMBER_UPDATE',
+			'GUILD_MEMBERS_CHUNK',
+			'GUILD_INTEGRATIONS_UPDATE',
+			'GUILD_BAN_ADD',
+			'GUILD_BAN_REMOVE',
+			'GUILD_EMOJIS_UPDATE',
+			'CHANNEL_PINS_UPDATE',
+			'MESSAGE_UPDATE',
+			'MESSAGE_DELETE_BULK',
+			'MESSAGE_REACTION_REMOVE',
+			'MESSAGE_REACTION_REMOVE_ALL',
+			'MESSAGE_REACTION_REMOVE_EMOJI',
+			'USER_UPDATE',
+			'PRESENCE_UPDATE',
+			'TYPING_START',
+			'WEBHOOKS_UPDATE',
+		]
 	}
 );
 
@@ -95,7 +124,8 @@ client.kaomojis = ['(* ^ ω ^)', '(o^▽^o)', 'ヽ(・∀・)ﾉ', '(o･ω･o)
 client.devseval = [
 	'507367752391196682', // Lil MARCROCK22
 	'577000793094488085', // AndreMor
-	'366779196975874049' // Socram09
+	'366779196975874049', // Socram09
+	'390726024536653865' // zPablo 鯉
 ];
 // eslint-disable-next-line no-unused-vars
 const Classes = require('./Utils/Classes.js');

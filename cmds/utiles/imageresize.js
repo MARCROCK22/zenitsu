@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const { Message, MessageAttachment, MessageEmbed, Util, TextChannel } = require("discord.js")
+const { Message, MessageAttachment, MessageEmbed, Util, TextChannel } = require('discord.js-light')
 
 const Command = require('../../Utils/Classes').Command;
 module.exports = class Comando extends Command {
@@ -47,11 +47,11 @@ module.exports = class Comando extends Command {
             let attachment = await resizeImage(url, numerito, segundonumerito, message.channel)
 
             let embed = new MessageEmbed()
-                .attachFiles([attachment])
-                .setImage(`attachment://${attachment.name}`)
+                .setImage(attachment)
                 .setColor(client.color)
                 .setTimestamp()
-                .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
+                .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true, size: 2048 }), attachment)
+                .setFooter(`La imagen solo durara un minuto, si quieres puedes descargartela...`)
 
             return message.channel.send({ content: `${message.member}`, embed });
 
@@ -89,7 +89,7 @@ function isNegative(num) {
  * @param {Number} height 
  * @param {Boolean} isGif
  * @param {TextChannel} channel
- * @returns {Promise<MessageAttachment>}
+ * @returns {Promise<String>}
  */
 
 async function resizeImage(link = 'https://', width = 50, height = 50, channel) {
@@ -107,24 +107,45 @@ async function resizeImage(link = 'https://', width = 50, height = 50, channel) 
 
         const res = await resizeGif({ width, height, stretch: true })(buffer)
 
-        let att = new MessageAttachment(res, 'file.gif');
-        if (msg && !msg.deleted && msg.deletable) msg.delete({ timeout: 3000 }).catch(() => null);
+        const FormData = require('form-data'),
+            formData1 = new FormData()
 
-        return att;
+        formData1.append('file', res, { contentType: 'image/gif', name: 'file', filename: 'file.gif' });
+
+        const fetch = require('node-fetch'),
+            res1 = await fetch(`https://zenitsu.eastus.cloudapp.azure.com/images`, {
+                method: 'POST',
+                body: formData1,
+                headers: {
+                    authorization: process.env.PASSWORD
+                },
+            }),
+            { link } = await res1.json();
+
+        if (!msg.deleted && msg.deletable) msg.delete({ timeout: 3000 }).catch(() => { })
+
+        return link;
 
     } else {
-
         const bufferSharp = await sharp(buffer)
             .resize({
                 width,
                 height,
                 fit: `fill`,
             })
-            .toBuffer();
-
-        return new MessageAttachment(bufferSharp, 'file.png')
-
+            .toBuffer(),
+            FormData = require('form-data'),
+            formData2 = new FormData()
+        formData2.append('file', bufferSharp, { contentType: 'image/png', name: 'file', filename: 'file.png' })
+        const fetch = require('node-fetch'),
+            res2 = await fetch(`https://zenitsu.eastus.cloudapp.azure.com/images`, {
+                method: 'POST',
+                body: formData2,
+                headers: {
+                    authorization: process.env.PASSWORD
+                },
+            }),
+            { link } = await res2.json();
+        return link;
     }
-
-
 }

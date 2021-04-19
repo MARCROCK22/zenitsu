@@ -9,7 +9,7 @@ module.exports = class Comando extends Command {
     }
     async run({ client, message }) {
 
-        const Discord = require('discord.js');
+        const Discord = require('discord.js-light');
 
         let date = Date.now();
         let ping_db = await new Promise((r, j) => {

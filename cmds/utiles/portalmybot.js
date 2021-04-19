@@ -1,4 +1,4 @@
-const Discord = require('discord.js')
+const Discord = require('discord.js-light')
 const mybo = require("myscrapper"),
     mybot = require('../../models/mybot')
 

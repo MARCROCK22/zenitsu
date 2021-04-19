@@ -2,7 +2,7 @@
 const regex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/gi
 const Command = require('../../Utils/Classes').Command;
 const { default: image } = require('image-url-validator');
-const Discord = require('discord.js');
+const Discord = require('discord.js-light');
 module.exports = class Comando extends Command {
 	constructor() {
 		super()

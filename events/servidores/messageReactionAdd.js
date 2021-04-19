@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const Discord = require("discord.js");
+const Discord = require('discord.js-light');
 const { AmongUs } = require('../../Utils/Functions');
 const model = require('../../models/amongus');
 /**
@@ -12,7 +12,7 @@ module.exports = async (client, reaction, user) => {
 
     const data = await model.findOne({ idGuild: reaction.message.guild?.id, idMessage: reaction.message.id });
 
-    if (reaction.message.partial) reaction.message.partial = await reaction.message.fetch().catch(() => { });
+    if (reaction.message.partial) reaction.message = await reaction.message.fetch().catch(() => { });
     if (!reaction.message) return;
     if (!data) return;
 

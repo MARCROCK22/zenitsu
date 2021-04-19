@@ -1,4 +1,4 @@
-const Discord = require("discord.js")
+const Discord = require('discord.js-light')
 
 const Command = require('../../Utils/Classes').Command;
 module.exports = class Comando extends Command {
@@ -11,6 +11,7 @@ module.exports = class Comando extends Command {
 
 		let todo = '';
 		let memberXD = message.guild.members.cache.find(a => a.displayName == args.join(' ') || a.user.tag == args.join(' ') || a.user.username == args.join(' ')) || message.mentions.members.first()
+			|| message.guild.members.cache.get(args[0])
 			|| message.mentions.roles.first()
 			|| message.guild.roles.cache.get(args[0])
 			|| message.guild.roles.cache.find(r => r.name === args.join(' '))

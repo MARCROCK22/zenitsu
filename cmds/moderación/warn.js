@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require('discord.js-light');
 const easy = require('easymaty');
 
 const Command = require('../../Utils/Classes').Command;

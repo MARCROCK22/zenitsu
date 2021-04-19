@@ -1,6 +1,6 @@
 
 const Command = require('../../Utils/Classes').Command,
-    Discord = require('discord.js')
+    Discord = require('discord.js-light')
 module.exports = class Comando extends Command {
     constructor() {
         super()

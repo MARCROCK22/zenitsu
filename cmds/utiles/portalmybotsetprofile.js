@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const Discord = require('discord.js')
+const Discord = require('discord.js-light')
 const mybo = require("myscrapper");
 const { sendEmbed } = require('../../Utils/Functions')
 const model = require('../../models/mybot');

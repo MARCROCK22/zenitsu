@@ -22,7 +22,7 @@ module.exports = class Comando extends Command {
                     deny: ["VIEW_CHANNEL", "SEND_MESSAGES"]
                 },
                 {
-                    id: message.author.id, //usuario
+                    id: message.member, //usuario
                     allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'ATTACH_FILES', 'EMBED_LINKS']
                 },
                 {
