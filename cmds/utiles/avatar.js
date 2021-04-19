@@ -12,7 +12,7 @@ module.exports = class Comando extends Command {
 
         let miembro = message.mentions.members.first() || message.guild.members.resolve(args[0]) || message.guild.members.cache.find(a => a.user.username === args.join(' ')) || message.guild.members.cache.find(a => a.user.tag === args.join(' ')) || message.guild.members.cache.find(a => a.displayName === args.join(' ')) || message.member;
 
-        let avatar = miembro.user.displayAvatarURL({ dynamic: true, size: 2048 })
+        let avatar = miembro.user.displayAvatarURL({ dynamic: true, size: 2048, format: 'png' })
 
         let buscarG = `https://www.google.com/searchbyimage?image_url=${avatar}`
 
