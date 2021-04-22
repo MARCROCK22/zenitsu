@@ -2,30 +2,42 @@
     "messages": {
         "es_afk_volver": "<:sesonroja:804750422828515339> | ¡Bienvenido de vuelta!",
         "en_afk_volver": "<:sesonroja:804750422828515339> | Welcome back!",
+        "ru_afk_volver": "<:sesonroja:804750422828515339> | Добро пожаловать обратно!",
         "es_permisos_bot_guild": "<:cancel:804368628861763664> | Ups, me faltan algun/algunos permiso(s) en el servidor: {PERMISOS}",
         "en_permisos_bot_guild": "<:cancel:804368628861763664> | Oops, I am missing some permissions on the guild: {PERMISOS}",
+        "ru_permisos_bot_guild": "<:cancel:804368628861763664> | К сожалению, у меня отсутствуют некоторые разрешения для гильдии:: {PERMISOS}",
         "es_permisos_bot_channel": "<:cancel:804368628861763664> | Ups, me faltan algun/algunos permiso(s) en el canal: {PERMISOS}",
         "en_permisos_bot_channel": "<:cancel:804368628861763664> | Oops, I am missing some permissions on the channel: {PERMISOS}",
+        "ru_permisos_bot_channel": "<:cancel:804368628861763664> | К сожалению, у меня отсутствуют некоторые разрешения на канале: {PERMISOS}",
         "es_permisos_user_guild": "<:cancel:804368628861763664> | Ups, te faltan algun/algunos permiso(s) en el servidor: {PERMISOS}",
         "en_permisos_user_guild": "<:cancel:804368628861763664> | Oops, You are missing some permissions on the guild: {PERMISOS}",
+        "ru_permisos_user_guild": "<:cancel:804368628861763664> | К сожалению, у вас отсутствуют некоторые разрешения в гильдии: {PERMISOS}",
         "es_permisos_user_channel": "<:cancel:804368628861763664> | Ups, te faltan algun/algunos permiso(s) en el canal: {PERMISOS}",
         "en_permisos_user_channel": "<:cancel:804368628861763664> | Oops, You are missing some permissions on the channel: {PERMISOS}",
+        "ru_permisos_user_channel": "<:cancel:804368628861763664> | К сожалению, у вас отсутствуют некоторые разрешения на канале: {PERMISOS}",
         "es_error": "Algo pasó, aquí un mensaje: {ERROR}",
         "en_error": "Something happened, here's a debug: {ERROR}",
+        "ru_error": "Что-то случилось, вот отладка: {ERROR}",
         "es_cooldown": "Por favor espera {TIME} antes de usar `{COMMAND}`",
-        "en_cooldown": "Please wait {TIME} before use `{COMMAND}`"
+        "en_cooldown": "Please wait {TIME} before use `{COMMAND}`",
+        "ru_cooldown": "Пожалуйста, подождите {TIME} перед использованием `{COMMAND}`"
     },
     "music": {
         "es_music_request": "Unete a un canal de voz y pide una canción.",
         "en_music_request": "Join to a voice channel and request a song.",
+        "ru_music_request": "Присоединитесь к голосовому каналу и запросите песню.",
         "es_no_queue": "Sin cola.",
         "en_no_queue": "No queue.",
+        "ru_no_queue": "Очереди нет.",
         "es_read_topic": "Lee el tópico del canal para obtener instrucciones.",
         "en_read_topic": "Read the topic of the channel to get instructions.",
+        "ru_read_topic": "Прочтите тему канала, чтобы получить инструкции.",
         "es_nowplaying": "{DURATION} Reproduciendo ahora: {SONG_NAME}",
         "en_nowplaying": "{DURATION} Now playing: {SONG_NAME}",
+        "ru_nowplaying": "{DURATION} Сейчас играет: {SONG_NAME}",
         "es_queue": "Cola:\n{TEXT}",
         "en_queue": "Queue:\n{TEXT}",
+        "ru_queue": "Очередь:\n{TEXT}",
         "es_queue_modes": [
             "Ninguno",
             "Canción",
@@ -36,99 +48,141 @@
             "Song",
             "Queue"
         ],
+        "ru_queue_modes": [
+            "Никто",
+            "Песня",
+            "Очередь"
+        ],
         "es_live": "En directo",
         "en_live": "Live",
+        "ru_live": "Жить",
         "es_loop_mode": "Modo de repetición",
         "en_loop_mode": "Loop mode",
+        "ru_loop_mode": "Режим петли",
         "es_songs_in_queue": "Canciones en cola",
         "en_songs_in_queue": "Songs in queue",
+        "ru_songs_in_queue": "Песни в очереди",
         "es_autoplay": "Repetición automatica",
         "en_autoplay": "Autoplay",
+        "ru_autoplay": "Автовоспроизведение",
         "es_yes": "Sí",
         "en_yes": "Yes",
+        "ru_yes": "да",
         "es_no": "No",
-        "en_no": "No"
+        "en_no": "No",
+        "ru_no": "Нет"
     },
     "commands": {
         "lockchannel": {
             "es_on_block": "<:moderator:804368587115593800> | {MOD} ha bloqueado el canal para los miembros.",
             "en_on_block": "<:moderator:804368587115593800> | {MOD} has blocked the channel for members.",
+            "ru_on_block": "<:moderator:804368587115593800> | {MOD} заблокировал канал для участников.",
             "es_on_block_error": "<:cancel:804368628861763664> | Error al intentar bloquear el canal.",
             "en_on_block_error": "<:cancel:804368628861763664> | Error trying to block the channel.",
+            "ru_on_block_error": "<:cancel:804368628861763664> | Ошибка при попытке заблокировать канал.",
             "es_on_unblock": "<:moderator:804368587115593800> | {MOD} ha desbloqueado el canal para los miembros.",
             "en_on_unblock": "<:moderator:804368587115593800> | {MOD} has unblocked the channel for members.",
+            "ru_on_unblock": "<:moderator:804368587115593800> | {MOD} разблокировал канал для участников.",
             "es_on_unblock_error": "<:cancel:804368628861763664> | Error al intentar desbloquear el canal.",
-            "en_on_unblock_error": "<:cancel:804368628861763664> | Error trying to unblock the channel."
+            "en_on_unblock_error": "<:cancel:804368628861763664> | Error trying to unblock the channel.",
+            "ru_on_unblock_error": "<:cancel:804368628861763664> | Ошибка при попытке разблокировать канал."
         },
         "setprefix": {
             "es_no_prefix": "<:cancel:804368628861763664> | Necesitas especificar el prefijo nuevo.",
             "en_no_prefix": "<:cancel:804368628861763664> | You need to specify the new prefix.",
+            "ru_no_prefix": "<:cancel:804368628861763664> | Вам нужно указать новый префикс.",
             "es_prefix_length": "<:cancel:804368628861763664> | El prefijo debe tener menos de 3 caracteres.",
             "en_prefix_length": "<:cancel:804368628861763664> | The prefix must have less than 3 characters.",
+            "ru_prefix_length": "<:cancel:804368628861763664> | Префикс должен состоять менее чем из 3 символов.",
             "es_prefix_nice": "<:trustedAdmin:804368672520536104> | {THE_MOD} ha establecido el prefijo a: ",
             "en_prefix_nice": "<:trustedAdmin:804368672520536104> | {THE_MOD} has established the prefix to: ",
+            "ru_prefix_nice": "<:trustedAdmin:804368672520536104> | {THE_MOD} установил префикс для: ",
             "es_prefix_error": "<:cancel:804368628861763664> | Error al establecer el prefijo.",
-            "en_prefix_error": "<:cancel:804368628861763664> | Error setting the prefix."
+            "en_prefix_error": "<:cancel:804368628861763664> | Error setting the prefix.",
+            "ru_prefix_error": "<:cancel:804368628861763664> | Ошибка при установке префикса."
         },
         "setlang": {
             "es_invalid": "<:cancel:804368628861763664> | Uso incorrecto del comando.",
-            "en_invalid": "<:cancel:804368628861763664> | Incorrect use of the command."
+            "en_invalid": "<:cancel:804368628861763664> | Incorrect use of the command.",
+            "ru_invalid": "<:cancel:804368628861763664> | Неправильное использование команды."
         },
         "guilds": {
             "es": "Actualmente estoy en {GUILDS} servidores.",
-            "en": "I am currently on {GUILDS} servers."
+            "en": "I am currently on {GUILDS} servers.",
+            "ru": "Я сейчас на {GUILDS} серверы."
         },
         "invite": {
             "es": "Link de invitación del bot: [Link]({LINK} \"Invitaras al bot\")🤖\nLink de invitación al servidor de soporte: [Link]({SUPPORT_LINK} \"Recibirás ayuda\")<:zStaffZenitsu:766436216966217729>",
-            "en": "Bot invitation link: [Link]({LINK} \"Invite the bot\")🤖\nSupport link: [Link]({SUPPORT_LINK} \"You will receive help\")<:zStaffZenitsu:766436216966217729>"
+            "en": "Bot invitation link: [Link]({LINK} \"Invite the bot\")🤖\nSupport link: [Link]({SUPPORT_LINK} \"You will receive help\")<:zStaffZenitsu:766436216966217729>",
+            "ru": "Ссылка для приглашения бота: [Link]({LINK} \"Пригласите бота\")🤖\nСсылка на поддержку: [Link]({SUPPORT_LINK} \"Вы получите помощь\")<:zStaffZenitsu:766436216966217729>"
         },
         "reportbug": {
             "es_need": "<:cancel:804368628861763664> | Necesitas especificar el error.",
             "en_need": "<:cancel:804368628861763664> | You need to specify the error.",
+            "ru_need": "<:cancel:804368628861763664> | Вам нужно указать ошибку.",
             "es_send": "📢 | Reporte enviado!",
-            "en_send": "📢 | Report sent!"
+            "en_send": "📢 | Report sent!",
+            "ru_send": "📢 | Отчет отправлен!"
         },
         "suggest": {
             "es_need": "<:cancel:804368628861763664> | Necesitas especificar la sugerencia.",
             "en_need": "<:cancel:804368628861763664> | You need to specify the suggestion.",
+            "ru_need": "<:cancel:804368628861763664> | Вам необходимо указать предложение.",
             "es_send": "<:reason2:804368699887845376> | Sugerencia enviado!",
-            "en_send": "<:reason2:804368699887845376> | Suggestion sent!"
+            "en_send": "<:reason2:804368699887845376> | Suggestion sent!",
+            "ru_send": "<:reason2:804368699887845376> | Предложение отправлено!"
         },
         "connect4": {
             "es_curso": "<:cancel:804368628861763664> | Hay una partida en curso en este servidor.",
             "en_curso": "<:cancel:804368628861763664> | There is an ongoing game on this server.",
+            "ru_curso": "<:cancel:804368628861763664> | На этом сервере идет игра.",
             "es_mention": "<:cancel:804368628861763664> | Menciona a un miembro del servidor para jugar.",
             "en_mention": "<:cancel:804368628861763664> | Mention a server member to play.",
+            "ru_mention": "<:cancel:804368628861763664> | Упомяните участника сервера для игры.",
             "es_footer": "Tambien puedes jugar con Zenitsu poniendo z!connect4 easy/medium/hard",
             "en_footer": "You can also play with Zenitsu putting z!connect4 easy/medium/hard",
+            "ru_footer": "Также можно поиграть с Зеницу, поставив z!connect4 easy/medium/hard",
             "es_user_active": "{USER} está activo en otra partida.",
             "en_user_active": "{USER} is active in another game.",
+            "ru_user_active": "{USER} активен в другой игре.",
             "es_author_active": "Estas activo en otra partida.",
             "en_author_active": "You are active in another game.",
+            "ru_author_active": "Вы активны в другой игре.",
             "es_wait_user": "<a:waiting:804396292793040987> | {USER}, tienes un minuto para responder...\n¿Quieres jugar?: responde `s`\n¿No quieres jugar?: responde `n`",
             "en_wait_user": "<a:waiting:804396292793040987> | {USER}, you have 1 minute to answer...\nDo you want to play?: answer `s`\nYou dont want?: answer `n`",
+            "ru_wait_user": "<a:waiting:804396292793040987> | {USER}, у вас есть 1 минута, чтобы ответить ...\nТы хочешь поиграть?: отвечать `s`\nВы не хотите?: отвечать `n`",
             "es_dont_answer": "😔 | {USER} no respondió...",
             "en_dont_answer": "😔 | {USER} did not answer...",
+            "ru_dont_answer": "😔 | {USER} не ответили...",
             "es_deny": "😔 | {USER} rechazó la invitación...",
             "en_deny": "😔 | {USER} rejected the invitation...",
+            "ru_deny": "😔 | {USER} отклонил приглашение...",
             "es_start": "Empieza {USER}, elige un numero del 1 al 7. [`🔴`]",
             "en_start": "Begin {USER}, Choose a number from 1 to 7. [`🔴`]",
+            "ru_start": "Начинать {USER}, Выберите число от 1 до 7. [`🔴`]",
             "es_win": "<:uh:829390140832874506> | {USER} ha ganado la partida!",
             "en_win": "<:uh:829390140832874506> | {USER} won the game!",
+            "ru_win": "<:uh:829390140832874506> | {USER} выиграл игру!",
             "es_draw": "<:wtdDud:829390621894508544> | Un empate entre {USER_CONNECT4_AI_FIRST_USER_PLAYER} y {USER_CONNECT4_AI_SECOND_USER_PLAYER}.",
             "en_draw": "<:wtdDud:829390621894508544> | A draw between {USER_CONNECT4_AI_FIRST_USER_PLAYER} and {USER_CONNECT4_AI_SECOND_USER_PLAYER}.",
+            "ru_draw": "<:wtdDud:829390621894508544> | Ничья между{USER_CONNECT4_AI_FIRST_USER_PLAYER} а также {USER_CONNECT4_AI_SECOND_USER_PLAYER}.",
             "es_turn": "Turno de {USER} [`GAME_USER_CONNECT4_AI_PLAYER_TURNS`]",
             "en_turn": "{USER}'s turn [`{GAME_USER_CONNECT4_AI_PLAYER_TURNS}`]",
+            "ru_turn": "{USER}' повернуть [`{GAME_USER_CONNECT4_AI_PLAYER_TURNS}`]",
             "es_game_over": "<:wtdDud:829390621894508544> | Juego terminado...",
             "en_game_over": "<:wtdDud:829390621894508544> | Game over...",
+            "ru_game_over": "<:wtdDud:829390621894508544> | Игра окончена...",
             "es_game_over2": "<:wtdDud:829390621894508544> | Juego terminado D:",
             "en_game_over2": "<:wtdDud:829390621894508544> | Game over D:",
+            "ru_game_over2": "<:wtdDud:829390621894508544> | Игра окончена D:",
             "es_time_over": "<:dislike1:369553357377110027> | Duraste tres minutos sin responder, juego terminado!",
-            "en_time_over": "<:dislike1:369553357377110027> | You lasted three minutes without answering, game over! -"
+            "en_time_over": "<:dislike1:369553357377110027> | You lasted three minutes without answering, game over! -",
+            "ru_time_over": "<:dislike1:369553357377110027> | Вы продержались три минуты без ответа, игра окончена! -"
         },
         "connect4stats": {
             "es_no_data": "<:cancel:804368628861763664> | Sin datos sobre {USER} aún.",
             "en_no_data": "<:cancel:804368628861763664> | No data about {USER} yet.",
+            "ru_no_data": "<:cancel:804368628861763664> | Нет данных о {USER} еще.",
             "es_difficulties": [
                 "Fácil",
                 "Normal",
@@ -139,6 +193,11 @@
                 "Medium",
                 "Hard"
             ],
+            "ru_difficulties": [
+                "Легкий",
+                "Середина",
+                "Жесткий"
+            ],
             "es_states": [
                 "Ganadas",
                 "Perdidas",
@@ -148,11 +207,17 @@
                 "Wins",
                 "Loses",
                 "Draws"
+            ],
+            "ru_states": [
+                "Побед",
+                "Проигрывает",
+                "Розыгрыши"
             ]
         },
         "connect4top": {
             "es_no_data": "<:cancel:804368628861763664> | Aún no hay datos en la dificultad {DIF}",
             "en_no_data": "<:cancel:804368628861763664> | There is still no data in {DIF} difficulty",
+            "ru_no_data": "<:cancel:804368628861763664> | Нет данных в {DIF} трудность",
             "es_states": [
                 "Ganadas",
                 "Perdidas",
@@ -162,29 +227,44 @@
                 "Wins",
                 "Loses",
                 "Draws"
+            ],
+            "ru_states": [
+                "Побед",
+                "Проигрывает",
+                "Розыгрыши"
             ]
         },
         "tictactoe": {
             "es_game": "<:cancel:804368628861763664> | Menciona a un miembro del servidor para jugar.",
             "en_game": "<:cancel: 804368628861763664> | Mention a server member to play.",
+            "ru_game": "<:cancel: 804368628861763664> | Упомяните участника сервера для игры.",
             "es_curso": "<:cancel:804368628861763664> | Hay una partida en curso en este servidor.",
             "en_curso": "<:cancel:804368628861763664> | There is an ongoing game on this server.",
+            "ru_curso": "<:cancel:804368628861763664> | На этом сервере идет игра.",
             "es_wait_user": "<a:waiting:804396292793040987> | {USER}, tienes un minuto para responder...\n¿Quieres jugar?: responde `s`\n¿No quieres jugar?: responde `n`",
             "en_wait_user": "<a:waiting:804396292793040987> | {USER}, you have 1 minute to answer...\nDo you want to play?: answer `s`\nYou dont want?: answer `n`",
+            "ru_wait_user": "<a:waiting:804396292793040987> | {USER}, у вас есть 1 минута, чтобы ответить ...\nТы хочешь поиграть?: отвечать `s`\nТы не хочешь?: отвечать `n`",
             "es_dont_answer": "😔 | {USER} no respondió...",
             "en_dont_answer": "😔 | {USER} did not answer...",
+            "ru_dont_answer": "😔 | {USER} не ответили...",
             "es_deny": "😔 | {USER} rechazó la invitación...",
             "en_deny": "😔 | {USER} rejected the invitation...",
+            "ru_deny": "😔 | {USER} отклонил приглашение...",
             "es_win": "<:uh:829390140832874506> | ¡{USER} ha ganado la partida!",
             "en_win": "<:uh:829390140832874506> | {USER} win the game!",
+            "ru_win": "<:uh:829390140832874506> | {USER} выиграть игру!",
             "es_draw": "<:wtdDud:829390621894508544> | Un empate entre {USER_TICTACTOE_AI_FIRST_USER_PLAYER} y {USER_TICTACTOE_AI_SECOND_USER_PLAYER}!",
             "en_draw": "<:wtdDud:829390621894508544> | A draw between {USER_TICTACTOE_AI_FIRST_USER_PLAYER} and {USER_TICTACTOE_AI_SECOND_USER_PLAYER}!",
+            "ru_draw": "<:wtdDud:829390621894508544> | Ничья между {USER_TICTACTOE_AI_FIRST_USER_PLAYER} а также {USER_TICTACTOE_AI_SECOND_USER_PLAYER}!",
             "es_turn": "Turno de {USER}",
             "en_turn": "{USER}'s turn",
+            "ru_turn": "{USER}' повернуть",
             "es_start": "{FICHA} | Empieza {USER}, elige un numero del 1 al 9.",
             "en_start": "{FICHA} | Begin {USER}, Choose a number from 1 to 9.",
+            "ru_start": "{FICHA} | Начинать {USER}, Выберите число от 1 до 9.",
             "es_game_over": "<:wtdDud:829390621894508544> | Juego terminado...",
-            "en_game_over": "<:wtdDud:829390621894508544> | Game over..."
+            "en_game_over": "<:wtdDud:829390621894508544> | Game over...",
+            "ru_game_over": "<:wtdDud:829390621894508544> | Игра окончена..."
         },
         "help": {
             "es_categories": [
@@ -200,13 +280,22 @@
                 "Mod",
                 "Bot",
                 "Admin"
+            ],
+            "ru_categories": [
+                "Утилиты",
+                "Веселье",
+                "Мод",
+                "Бот",
+                "Админ"
             ]
         },
         "djs": {
             "es_what": "<a:CatLoad:804368444526297109> | ¿Que quieres buscar en la documentación de discord.js?",
             "en_what": "<a:CatLoad:804368444526297109> | What do you want to look for in the Discord.js documentation?",
+            "ru_what": "<a:CatLoad:804368444526297109> | Что вы хотите найти в документации Discord.js?",
             "es_no_result": "<:cancel:804368628861763664> | Sin resultados.",
-            "en_no_result": "<:cancel:804368628861763664> | No results."
+            "en_no_result": "<:cancel:804368628861763664> | No results.",
+            "ru_no_result": "<:cancel:804368628861763664> | Нет результатов."
         }
     }
 }
