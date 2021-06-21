@@ -17,7 +17,7 @@
   "devDependencies": {
     "@types/gifencoder": "^2.0.1",
     "@types/string-similarity": "^4.0.0",
-    "@types/twemoji-parser": "^12.1.0",
+    "@types/twemoji-parser": "^13.1.0",
     "@types/ws": "^7.4.4",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
